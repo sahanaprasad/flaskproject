@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/admin.jpg'); 	
+}
+table
+{
+	
+	margin-top:50px;	
+	color:white;
+}
+h3
+{
+	color:white;
+}
+</style>
+<body>
+<table border="2" align=center  width= "800px" height="100 px">
+<thead>
+<td><h3>SHOW NAME</h3></td>
+<td><h3>RATINGS</h3></td>
+<td><h3>SUGGESTIONS</h3></td>
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<td><a href="/showlistnow/{{row['sname']}}"><color="white">{{ row["sname"] }}</a></td>
+		<td>{{ row["rating"] }}</td>
+		<td>{{ row["suggestions"] }}</td>
+	</tr>
+{% endfor %}
+</table>
+<a href="/visitor">go back</a>
+</body>
+</html>

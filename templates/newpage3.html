@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/bg5.jpg'); 	
+}
+table
+{
+	
+	margin-top:50px;	
+
+}
+h3
+{
+	color:black;
+}
+</style>
+<body>
+<table border="2" align=center  width= "800px" height="100 px">
+<thead>
+<td><h3>SHOW ID</h3></td>
+<td><h3>SHOW NAME</h3></td>
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["s_id"] }}</td>
+		<td><a href="/rateshow/{{row['s_id']}}/{{ row['sname'] }}/{{msg1}}">{{ row["sname"] }}</td></a>
+	</tr>
+{% endfor %}
+</table>
+<a href="/userlogin/{{msg1}}">go back</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/bg5.jpg'); 	
+}
+form
+{
+	
+	margin-top:50px;	
+	margin-left:500px;
+
+}
+h3
+{
+	color:white;
+	background-color:black;
+}
+</style>
+<h3>Show Information</h3>
+<body>
+<form action="{{ url_for('addnewshow') }}" method="POST">
+<!-- <fieldset> -->
+
+Genere Id<br>
+<input type="text" name="g_id"/></br><br></br>
+Show Id<br>
+<input type="text" name="s_id"/></br><br></br>
+Show Name<br>
+<input type="text" name="showname"/></br><br></br>
+Show Rating<br>
+<input type="text" name="rating"/></br><br></br>
+Sugestions<br>
+<input type="boolean" name="suggestions"/></br>
+<br></br>
+<input type="submit" value="submit"/></br>
+<!-- </fieldset> -->
+</form>
+<!-- <h4><a href="/login">login</a></h4> -->
+</body>
+</html>

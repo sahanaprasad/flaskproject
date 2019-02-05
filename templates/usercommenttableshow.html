@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/bg5.jpg'); 	
+}
+table
+{
+	
+	margin-top:50px;	
+
+}
+h3
+{
+	color:black;
+}
+</style>
+<body>
+<table border="2" align=center  width= "800px" height="100 px">
+<thead>
+<td><h3>SID</h3></td>
+<td><h3>SNAME</h3></td>
+<td><h3>RATINGS</h3></td>
+<td><h3>COMMENTS</h3></td>
+<td><h3>DELETE</h3></td>
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["sid"] }}</td>
+		<td>{{ row["sname"] }}</td>
+		<td>{{ row["rating"] }}</td>
+		<td>{{ row["comments"] }}</td>
+		<td><a href="/deletecomment/{{row['sname']}}/{{msg}}">DELETE</a></td>
+	</tr>
+{% endfor %}
+</table>
+<a href="/userlogin/{{msg}}">go back</a>
+</body>
+</html>

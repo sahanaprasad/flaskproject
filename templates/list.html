@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/bg5.jpg'); 	
+}
+table
+{
+	
+	margin-top:50px;	
+
+}
+h3
+{
+	color:black;
+}
+</style>
+<body>
+<table border="2" align=center  width= "800px" height="100 px">
+<thead>
+<td><h3>USERNAME</h3></td>
+<td><h3>EMAIL</h3></td>
+<td><h3>FIRST NAME</h3></td>
+<td><h3>LAST NAME</h3></td>
+<td><h3>DOB</h3></td>
+<td><h3>PASSWORD</h3></td>
+<td><h3>DELETE</h3></td>
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["username"] }}</td>
+		<td>{{ row["email"] }}</td>
+		<td>{{ row["firstname"] }}</td>
+		<td>{{ row["lastname"] }}</td>
+		<td>{{ row["dob"] }}</td>
+		<td>{{ row["password"] }}</td>
+		<td><a href="/deleteuser/{{row['username']}}">DELETE</a></td>
+	</tr>
+{% endfor %}
+</table>
+<a href="/adminback">go back</a>
+</body>
+</html>

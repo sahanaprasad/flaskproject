@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+body
+{
+	visibility:visible;
+	background-image: url('/static/admin.jpg');
+}
+table
+{
+	
+	background-color:AliceBlue;
+	visibility:visible;
+	font-family:Helvetica;
+	text-align:center;
+	text-color:black;
+	font-size:18pt;
+	margin-top:50px;	
+	margin-left:500px;
+	margin-right:200px;
+}
+</style>
+</head>
+<body>
+<h2 align="center"><a href="/newshow"><font color="Red">Add a new show</a></h2>
+<table border="2" align=right  width= "800px" height="100 px">
+<thead>
+<td><h3>ID</h3></td>
+<td><h3>GENERE</h3></td>
+<td><h3>DELETE</h3></td>
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["ID"] }}</td>
+		<td><a href="/showlist/{{row['ID']}}">{{ row["genre"] }}</a></td>
+		<td><a href="/deleteshow/{{row['ID']}}">DELETE</a></td>
+	</tr>
+{% endfor %}
+</table>
+
+<a href="/adminback"><font color="Red">go back</a>
+</body>
+</html>

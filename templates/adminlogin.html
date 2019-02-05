@@ -1,0 +1,38 @@
+<html>
+<style>
+input{
+  margin-top: 15px;
+  margin-left: 10%;
+  margin-right:25%;
+}
+body
+{
+	background-image: url('/static/adminlogin.jpg'); 
+}
+.box {
+  margin-top: 120px;
+  margin-left: 480px;
+  width: 310px; 
+  height: 460px; 
+  -webkit-border-radius: 8px/7px; 
+  -moz-border-radius: 8px/7px; 
+  border-radius: 8px/7px; 
+  background-color: white; 
+  -webkit-box-shadow: 1px 2px 5px grey; 
+  -moz-box-shadow: 1px 2px 5px grey; 
+  box-shadow: 1px 2px 5px grey; 
+  border: solid 1px grey;
+}
+</style>
+<body>
+      <div class="box">
+	<h1 align="center"><img src="/static/adminlogo.jpg" align="center" width="200px" height="200px"></h1>
+        <h1 align="center">ADMIN LOGIN</h1>
+        <form action="{{url_for('adminlogin')}}" method="POST">
+          <input type="password" name="password" id="password" placeholder="Password" required/>
+          <br>
+          <input type="submit" class="button" value="Log In"/>
+        </form>
+    </div>
+</body>
+</html>

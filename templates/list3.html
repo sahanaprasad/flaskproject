@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+body
+{
+	visibility:visible;
+	background-image: url('/static/bg5.jpg');
+}
+table
+{
+	
+	background-color:AliceBlue;
+	visibility:visible;
+	font-family:Helvetica;
+	text-align:center;
+	text-color:black;
+	font-size:18pt;
+	margin-top:50px;	
+	margin-left:500px;
+	margin-right:200px;
+}
+</style>
+</head>
+<body>
+<table border="2" align=right  width= "800px" height="100 px">
+<thead>
+<td><h3>ID</h3></td>
+<td><h3>GENERE</h3></td>
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["ID"] }}</td>
+		<td><a href="/showlistuser/{{row['ID']}}/{{msg1}}">{{ row["genre"] }}</a></td>
+	</tr>
+{% endfor %}
+</table>
+
+<a href="/userlogin/{{msg1}}">go back</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/bg5.jpg'); 	
+}
+form
+{
+	
+	margin-top:50px;	
+	margin-left:500px;
+
+}
+h3
+{
+	color:white;
+	background-color:black;
+}
+</style>
+<h3>new genre</h3>
+<body>
+<form action="{{ url_for('addshow') }}" method="POST">
+<!-- <fieldset> -->
+
+ID<br>
+<input type="text" name="ID"/></br>
+<br></br>
+ type<br>
+<input type="text" name="genre"/></br>
+<br></br>
+
+<input type="submit" value="submit"/></br>
+<!-- </fieldset> -->
+</form>
+<!-- <h4><a href="/login">login</a></h4> -->
+</body>
+</html>

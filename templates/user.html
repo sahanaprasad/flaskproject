@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/bg5.jpg'); 	
+}
+form
+{
+	
+	margin-top:50px;	
+	margin-left:500px;
+
+}
+h3
+{
+	color:white;
+	background-color:black;
+}
+</style>
+<h3>User Information</h3>
+<body>
+<form action="{{ url_for('addrec') }}" method="POST">
+<!-- <fieldset> -->
+
+ User Name<br>
+<input type="text" name="username"/></br>
+Email<br>
+<input type="email" name="email"/></br>
+First Name<br>
+<input type="text" name="first_name"/></br>
+Last name<br>
+<input type="text" name="last_name"/></br>
+Date Of Birth<br>
+<input type="date" name="dob"/></br>
+Password<br>
+<input type="password" name="pwd"/></br>
+Activity<br>
+<input type="boolean" name="activity"/></br>
+<br></br>
+<input type="submit" value="submit"/></br>
+<!-- </fieldset> -->
+</form>
+<!-- <h4><a href="/login">login</a></h4> -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	background-image: url('/static/2.jpg');
+}
+h1
+{
+	color:white;
+	background-color:black;
+	text-transform:uppercase;
+}
+h3
+{
+	color:white;
+	background-color:white;
+	text-transform:uppercase;
+}
+</style>
+<body>
+<table align="center" border="3">
+<h1 align="center">AVAILABLE GENRES</h1>
+<thead>
+<!-- <h2 align="center">Type</h2> -->
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<h3 align="center"><a href="{{url_for('new_page',msg=row["ID"])}}">{{ row["ID"]}}<hr><hr>{{ row["genre"] }}</a></h3>		
+		
+	</tr>
+{% endfor %}
+</table>
+
+<a href="/">go back</a>
+</body>
+</html>
